@@ -4,6 +4,7 @@
     background-color: red;
     border-radius: 15px;
     border: 2px solid red;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 .badge header{
@@ -14,7 +15,8 @@
     background-color: #ffffff;
     height: 190px;
     text-align: center;
-    padding-top: 30px;
+    padding: 10px 0 10px 0;
+
 }
 
 .badge main h3{
