@@ -1,0 +1,76 @@
+<template id="template">
+    <style>
+        .badge{
+            width: 100%;
+            height: 360px;
+            background-color: red;
+            border-radius: 15px;
+            border: 2px solid red;
+            font-weight: 500;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        }
+        .badge header{
+            text-align: center;
+            color: white;
+
+        }
+
+        .badge header h1{
+            font-size: 36px;
+            margin-bottom: 0.2em;
+            line-height: 1.1;
+            font-weight: 500;
+
+        }
+        .badge header h2{
+            font-size: 30px;
+            margin-top: 0.5em;
+            line-height: 1.1;
+            font-weight: 500;
+
+        }
+
+        .badge main{
+            background-color: #ffffff;
+            height: 190px;
+            text-align: center;
+            padding: 10px 0 10px 0;
+
+        }
+
+        .badge main h3{
+            font-size: 4em;
+            font-family: cursive;
+            color: black;
+        }
+    </style>
+    <!-- Add HTML for your component here.-->
+    <section class="badge">
+        <header>
+            <h1>Hello</h1>
+            <h2>My name is:</h2>
+        </header>
+        <main>
+            <h3><content></content></h3>
+        </main>
+    </section>
+
+</template>
+<script>
+    var createElement = function(tagName, templateId, basePrototype) {
+        basePrototype = basePrototype || HTMLElement.prototype;
+        var template = document.currentScript.ownerDocument.getElementById(templateId).content;
+        var customElementPrototype = Object.create(basePrototype);
+        customElementPrototype.createdCallback = function() {
+            var shadowRoot = this.createShadowRoot();
+            var clone = document.importNode(template, true);
+            shadowRoot.appendChild(clone);
+        };
+        return document.registerElement(tagName, {
+            prototype: customElementPrototype
+        });
+    };
+    // Initialize your component here with the above function!
+    createElement("name-badge", "template");
+</script>
