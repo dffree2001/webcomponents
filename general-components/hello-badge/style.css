@@ -1,12 +1,12 @@
 .badge{
-    width: 100%;
-    height: 360px;
-    background-color: red;
-    border-radius: 15px;
-    border: 2px solid red;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     width: 100%;
+     height: 360px;
+     background-color: red;
+     border-radius: 15px;
+     border: 2px solid red;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-}
+ }
 .badge header{
     text-align: center;
 }
@@ -22,4 +22,5 @@
 .badge main h3{
     font-size: 4em;
     font-family: cursive;
+    color: black;
 }
