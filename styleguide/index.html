@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <title>Web Components Styleguide</title>
     <!-- Bootstrap core CSS -->
-
+    <script src="vendor/bower_components/webcomponents.js/webcomponents.js"></script>
     <link href="vendor/bootstrap.min.css" rel="stylesheet">
-
     <link href="vendor/docs.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
     <style>.navbar-brand { font-size: 250%; line-height: 1.2; margin: 20px 0; }</style>
 
 </head>
 <body>
+
 
 <!-- Docs master nav -->
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
@@ -63,7 +63,6 @@
                         border-radius: 15px;
                         border: 2px solid red;
                         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
                     }
                     .badge header{
                         text-align: center;
@@ -132,14 +131,14 @@
                 <p>Lorem ipsum.</p>
                 <!-- Component code -->
 
-                <div id="button">Button</div>
+                <div id="button"><button><h2>Button</h2></button></div>
 
                 <script>
                     var buttonHost = document.querySelector('#button');
                     var shadowRoot = buttonHost.createShadowRoot();
                     var buttonNode = document.createElement('button');
-                    buttonNode.innerHTML += "<h2><content></content></h2>";
-                    buttonNode.innerHTML += "<style>h2{ color: white;} div{background: red}</style>";
+                    buttonNode.innerHTML += "<content></content>";
+                    buttonNode.innerHTML += "<style>h2{ color: white;}#mybtn{background: red}</style>";
                     shadowRoot.appendChild(buttonNode);
 
                 </script>
@@ -181,7 +180,7 @@
                         if(imageCounter < images.length-1){
                             imageCounter ++;
                         }else{
-                            //imageCounter = 0;
+                            imageCounter = 0;
                         }
                         images[imageCounter].style.display='block'
                     }, 1500);
