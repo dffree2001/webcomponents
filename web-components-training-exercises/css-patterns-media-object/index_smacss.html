@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>CSS Patterns: Media Object</title>
-
+    <link rel="stylesheet" href="style_smacss.css">
 </head>
 <body>
 <!-- Exercise instructions: This exercise will deep-dive into one type
@@ -19,37 +19,32 @@
 
      5. Try and nest the media objects
  -->
-<!-- OOCSS -->
+
 <style>
     .media-object{
         width: 100%;
     }
-    .media-object .media{
+    .media-object_media{
         float:left;
         width: 40%;
     }
-    .media-object .content{
+    .media-object_content{
         padding-left: 10%;
         float: left;
         box-sizing: border-box;
         width: 60%
     }
 </style>
-<div class="media-object">
-    <img src="http://lorempixel.com/300/200/sports" class="media">
 
-    <div class="content">
-       <h1>Having fun</h1>
+<!-- smacss -->
+<div class="media-object">
+    <img src="http://lorempixel.com/300/200/sports" class="media-object_media">
+
+    <div class="media-object_content">
+        <h1>Having fun</h1>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto asperiores blanditiis
             consectetur eos est et eum facere inventore laborum molestias, non quasi repellat similique tempore unde
             veritatis! Cumque, obcaecati?</p>
     </div>
 </div>
-
-
-
-
-</div>
-</body>
-</html>

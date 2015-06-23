@@ -5,7 +5,9 @@
     <title>Intro to the Shadow DOM</title>
 </head>
 <body>
-<style>p { color: red;}</style>
+<style>p { color: red;}
+.shadow::shadow p{ color: blue;}
+</style>
 
 <div class="light">
     <p>Hello, World.</p>
@@ -24,6 +26,11 @@
      3. Add a style element to the shadow root.  Confirm that style scoping is working.
 
  -->
+<script>
+    var shadowRoot = document.querySelector('.shadow').createShadowRoot();
+    shadowRoot.innerHTML += '<p>This is a test</p>';
+    shadowRoot.innerHTML += '<style>p{background: yellow;}</style>'
+</script>
 
 </body>
 </html>
