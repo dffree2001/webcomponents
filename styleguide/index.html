@@ -118,7 +118,7 @@
 
                 <!-- Component code example -->
                 <div class="highlight"><code class="html">
-                    <link rel="import" href="my-first-web-component/my-first-web-component.html">
+                    <link rel="import" href="../general-components/myfirstcomponent/my-first-web-component/my-first-web-component.html">
                     <name-badge>
 
                     </name-badge>
@@ -131,22 +131,15 @@
                 <p>Lorem ipsum.</p>
                 <!-- Component code -->
 
-                <div id="button"><button><h2>Button</h2></button></div>
+                <link rel="import" href="../general-components/button/index.html">
+                <fcc-button>Do something</fcc-button>
 
-                <script>
-                    var buttonHost = document.querySelector('#button');
-                    var shadowRoot = buttonHost.createShadowRoot();
-                    var buttonNode = document.createElement('button');
-                    buttonNode.innerHTML += "<content></content>";
-                    buttonNode.innerHTML += "<style>h2{ color: white;}#mybtn{background: red}</style>";
-                    shadowRoot.appendChild(buttonNode);
-
-                </script>
 
                 <!-- Component code example -->
                 <div class="highlight"><code class="html">
-                    <div id="button">Button</div></code></div>
-
+                    <link rel="import" href="../general-components/button/index.html">
+                    <fcc-button>Do something</fcc-button>
+                </code></div>
 
         <!-- Component title -->
                 <h2 id="forth-component">Slider</h2>
@@ -154,9 +147,9 @@
                 <p>Lorem ipsum.</p>
                 <!-- Component code -->
                 <div id="myEl">
-                    <h1>Hello</h1>
-                    <h2>World</h2>
-                    </div>
+                    <h4>Hello</h4>
+                    <h5>World</h5>
+                 </div>
                  <div id="myslider">
                      <img style="display:none" src="http://lorempixel.com/600/400/sports/1">
                      <img style="display:none" src="http://lorempixel.com/600/400/sports/2">
@@ -165,7 +158,7 @@
                  </div>
                 <script>
                     var shadowRoot = document.querySelector("#myEl").createShadowRoot();
-                    shadowRoot.innerHTML += '<div><content select="h2"></content></content><content select="h1"></content></div>'
+                    shadowRoot.innerHTML += '<div><content select="h5"></content></content><content select="h4"></content></div>'
 
                     var shadowRootImg = document.querySelector("#myslider").createShadowRoot();
                     var images = document.querySelector("#myslider").querySelectorAll('img');
